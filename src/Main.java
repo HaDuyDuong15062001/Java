@@ -4,38 +4,33 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello, OOP");
-        System.out.println("-----Lab 5-----\n");
+        System.out.println("-----Lab 6-----\n");
 
-//        ArrayList<String> myArrList = new ArrayList<String>();
-//
-//        // Some method
-//        myArrList.add("Duong");
-//        myArrList.add("Trang");
-//        System.out.println(myArrList.toString());
-//        System.out.println(myArrList.size());
-//        System.out.println(myArrList.get(0));
-        ArrayList<Double> list = new ArrayList<Double>();
-        Scanner scanner = new Scanner(System.in);
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap username: ");
+        String userName = sc.nextLine();
+        System.out.println("Nhap password: ");
+        String passWord = sc.nextLine();
+        if (userName.equals("hoidanit") && passWord.length() > 6)
+            System.out.println("Hop le");
+        else
+            System.out.println("Khong hop le");
+         */
 
-        while (true) {
-            System.out.println("Enter double number");
-            double x = scanner.nextDouble();
-            list.add(x);
-            scanner.nextLine();
-            System.out.println("Do you want to continue entering ? Y/N");
-            String option = scanner.nextLine();
-            if (option.equals("N") || option.equals("n")) {
-                break;
+        ArrayList<Student> listStudent = new ArrayList<Student>();
+
+        listStudent.add(new Student("Duong", 1));
+        listStudent.add(new Student("Nguyễn Thị Huyền Trang", 2));
+        listStudent.add(new Student("Hà Duy An", 3));
+        listStudent.add(new Student("Lê Ngô Minh Huy", 4));
+        listStudent.add(new Student("Phạm Linh Linh", 5));
+
+        for(Student s : listStudent) {
+            if (s.getName().startsWith("Nguyễn")) {
+                System.out.println(s.toString());
             }
-            else if (option.equals("Y") || option.equals("y")) {
-                continue;
-            }
+
         }
-        System.out.println(list.toString());
-        int sum = 0;
-        for (int i = 0; i < list.size(); ++i) {
-            sum += list.get(i);
-        }
-        System.out.println("Sum = " + sum);
     }
 }
