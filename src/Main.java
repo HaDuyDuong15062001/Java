@@ -7,5 +7,7 @@ public class Main {
         System.out.println("Regular Expression");
         for (int i = 0; i < 10; ++i)
             System.out.println(i);
+        int a = 0;
+        int b = 1;
     }
 }
